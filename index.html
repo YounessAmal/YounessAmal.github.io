@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOUNESS AMAL</title>
+    <style>
+        @import url('https://stagnansi.github.io/nhg/ff.css');
+         body {
+            background-image: url(FRAME\ 2.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+            transition: transform 0.5s ease;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Neue Haas Grotesk, sans-serif;
+            font-weight: 600;
+            background-color: #000;
+            color: #fff;
+            height: 100%;
+        }
+
+        @keyframes growUp {
+            from {
+                transform: translate(-50%, -50%) scale(0);
+                
+            }
+            to {
+                transform: translate(-50%, -50%) scale(1);
+                
+            }
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 40px;
+        }
+        .name {
+            font-size: 12px;
+            font-weight: bold;
+            
+        }
+        .title {
+            font-size: 10px;
+
+        }
+        .year {
+            font-size: 12px;
+        }
+        nav {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+            
+        }
+        nav a, .contact a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
+            position: relative;
+        }
+
+        .contact :hover{
+            text-decoration: underline;
+        }
+        .contact {
+            text-align: right;
+        }
+
+        .eye {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px; 
+            height: 400px; 
+            border-radius: 50%;
+            overflow: visible;
+            z-index: 0;
+        
+        }
+        #image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            animation: growUp 1s ease-out; 
+        }
+    </style>
+</head>
+<body>
+    <div class="eye"></div>
+        <img src="FRAME 18.png" alt="Eye" id="image">
+    </div>
+    <div class="container">
+        <header>
+            <div>
+                <div class="name">YOUNESS AMAL</div>
+                <div class="title">Graphic Designer, 3D Artist </div>
+            </div>
+            <div class="year">© 2024</div>
+        </header>
+        <nav>
+            <div>
+                <a href="works/works.html">WORKS</a>
+            </div>
+            <div>
+                <a href="info/information.html">INFORMATION</a>
+            </div>
+            <div>
+                <a href="artworks/artworks.html">ART</a>
+            </div>
+            <div class="contact">
+                <a href="mailto:HELLO@YOUNESS.WORK">HELLO@YOUNESS.WORK</a>
+            </div>
+        </nav>
+    </div>
+
+    <script>
+        const image = document.getElementById('image');
+        const eye = document.querySelector('.eye');
+        
+        document.addEventListener('mousemove', (e) => {
+            const { left, top, width, height } = eye.getBoundingClientRect();
+            const centerX = left + width / 2;
+            const centerY = top + height / 2;
+            const moveX = (e.clientX - centerX) / width * 90; 
+            const moveY = (e.clientY - centerY) / height * 90; 
+            image.style.transform = `translate(calc(-50% + ${moveX}px), calc(-50% + ${moveY}px))`;
+        });
+    </script>
+   
+</body>
+</html>

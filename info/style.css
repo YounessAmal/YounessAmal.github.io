@@ -1,0 +1,142 @@
+
+@import url('https://lox6554332.github.io/nhg/ff.css');
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  font-family: Neue Haas Grotesk, sans-serif;
+}
+
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+    
+  }
+  100% {
+    transform: translateY(0);
+    
+  }
+}
+
+.image-drag {
+  position: absolute;
+  width: 512px;
+  height: 277px;
+  cursor: grab;
+}
+.image-drag__inner {
+  position: absolute;
+  top: 5%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+
+  background-image: url("https://lox6554332.github.io/files/eyes/g.png");
+  background-size: 100%;
+  background-position: 60%;
+  background-repeat: none;
+  animation: slide-up  cubic-bezier(0.4, 0, 0.2, 1) 500ms forwards;
+  
+}
+.image-drag .image-drag-1 {
+  background-image: url("");
+}
+.image-drag__inner1 {
+  position: absolute;
+  top: 10%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+
+  background-image: url("https://lox6554332.github.io/files/eyes/r.png");
+  background-size: 100%;
+  background-position: 60%;
+  background-repeat: none;
+  animation: slide-up cubic-bezier(0.4, 0, 0.2, 1) 700ms forwards;
+  
+}
+.image-drag__inner2 {
+  position: absolute;
+  top: 15%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+
+  background-image: url("https://lox6554332.github.io/files/eyes/b.png");
+  background-size: 100%;
+  background-position: 60%;
+  background-repeat: none;
+  animation: slide-up cubic-bezier(0.4, 0, 0.2, 1) 900ms forwards;
+  
+}
+.image-drag__inner3 {
+  position: absolute;
+  top: 20%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  
+  background-image: url("https://lox6554332.github.io/files/eyes/lg.png");
+  background-size: 100%;
+  background-position: 60%;
+  background-repeat: none;
+  animation: slide-up cubic-bezier(0.4, 0, 0.2, 1) 1100ms forwards;
+  
+}
+.copyright{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 12px;
+  color: white;
+}
+#back-link {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	color: white;
+	text-decoration: none;
+	font-size: 14px;
+	z-index: 1000;
+	padding: 10px;
+	border-radius: 5px;
+  }
+
+.info {
+  grid-row: 2;
+  position: flex;
+  flex-direction: column;
+  margin-left: auto;
+  grid-column: 2;
+  margin-bottom: auto;
+  margin-top: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  z-index: 1000;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 20vw;
+  max-height: 50vh;
+
+}
+.p2{
+  margin-top: 20px;
+  grid-column: 2;
+}
+.p2 a{
+  color: white;
+}
+.IG{
+  margin-top: 20px;
+}
+.IG a{
+  color: white;
+  text-decoration: none;
+}

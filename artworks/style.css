@@ -1,0 +1,80 @@
+@import url('https://lox6554332.github.io/nhg/ff.css');
+body {
+  	margin:0;
+  	overflow:hidden;
+	font-family: Neue Haas Grotesk, sans-serif;
+	background: black;
+}
+
+img {
+  display:none;
+}
+
+.loading {
+	margin: -50px -50px;
+	border:0.2em dashed white;
+	position:absolute;
+	width: 100px;
+	height: 100px;
+	border-radius: 100px;
+	animation: load 5s linear infinite;
+}
+
+@keyframes load {
+	0% {
+		transform: translateX(50vw) translateY(50vh) rotateZ(0deg);
+	}
+	100% {
+		transform: translateX(50vw) translateY(50vh) rotateZ(360deg);
+	}
+}
+#back-link {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	color: white;
+	text-decoration: none;
+	font-size: 14px;
+	z-index: 1000;
+	padding: 10px;
+	border-radius: 5px;
+  }
+  
+
+  .copyright{
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	font-size: 12px;
+	color: white;
+  }
+  .email-link {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	color: white;
+	text-decoration: none;
+	font-size: 12px;
+	z-index: 1000;
+	padding: 10px;
+	border-radius: 5px;
+	
+  }
+  
+  .email-link:hover {
+	text-decoration: underline; 
+  }
+  .scrolling-text {
+	position: fixed;
+	left: 35.5%;
+	
+	bottom: 20px;
+	transform: translateY(-50%);
+	color: white;
+	font-size: 12px;
+	
+	text-orientation: mixed;
+	transition: opacity 0.5s ease;
+	z-index: 1000;
+	
+  }
