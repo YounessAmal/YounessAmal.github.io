@@ -107,7 +107,7 @@ body {
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.4.3/pixi.min.js'></script><script> 
-  "use strict";
+"use strict";
 console.clear();
 class Stage {
     constructor(canvas, width, height) {
@@ -120,7 +120,7 @@ class Stage {
         this.remove = function (element) {
             this.stage.removeChild(element);
         };
-        this.app = new PIXI.Application(width, height, { antialias: false, backgroundColor: 0x00000 });
+        this.app = new PIXI.Application(width, height, { antialias: false, backgroundColor: 0xffffff });
         canvas.appendChild(this.app.view);
         this.stage = new PIXI.Container();
         this.app.stage.addChild(this.stage);
@@ -135,7 +135,7 @@ class FaceCloud {
             rotation: true
         });
         let totalSprites = stage.app.renderer instanceof PIXI.WebGLRenderer ? 2000 : 100;
-        let texture = PIXI.Texture.fromImage('eyes2.png');
+        let texture = PIXI.Texture.fromImage('https://s3-us-west-2.amazonaws.com/s.cdpn.io/557388/me-transparent%401000x-8.png');
         for (var i = 0; i < totalSprites; i++) {
             var face = new PIXI.Sprite(texture);
             face.anchor.set(0.5);
