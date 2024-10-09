@@ -120,7 +120,7 @@ class Stage {
         this.remove = function (element) {
             this.stage.removeChild(element);
         };
-        this.app = new PIXI.Application(width, height, { antialias: false, backgroundColor: 0xffffff });
+        this.app = new PIXI.Application(width, height, { antialias: false, backgroundColor: 0x000000 });
         canvas.appendChild(this.app.view);
         this.stage = new PIXI.Container();
         this.app.stage.addChild(this.stage);
@@ -135,7 +135,7 @@ class FaceCloud {
             rotation: true
         });
         let totalSprites = stage.app.renderer instanceof PIXI.WebGLRenderer ? 2000 : 100;
-        let texture = PIXI.Texture.fromImage('https://s3-us-west-2.amazonaws.com/s.cdpn.io/557388/me-transparent%401000x-8.png');
+        let texture = PIXI.Texture.fromImage('https://lox6554332.github.io/files/eyes/eyes.png');
         for (var i = 0; i < totalSprites; i++) {
             var face = new PIXI.Sprite(texture);
             face.anchor.set(0.5);
